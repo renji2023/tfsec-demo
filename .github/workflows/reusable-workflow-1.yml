@@ -1,0 +1,22 @@
+name: Reusable Workflow 1
+
+on:
+  workflow_call:
+
+jobs:
+  tfsec:
+    name: Run tfsec scan
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v3
+
+      - name: Run tfsec
+        uses: aquasecurity/tfsec-action@v1.0.0
+        with:
+          working_directory: ./tf-fix
