@@ -8,7 +8,7 @@ on:
 
 jobs:
   call-workflow-in-local-repo:
-    uses: ./.github/workflows/reusable-workflow-1.yml
+    uses: renji2023/test_demo/.github/workflows/reusable_workflow2.yml@main
 
 
 
