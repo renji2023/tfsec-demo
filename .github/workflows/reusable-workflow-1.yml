@@ -23,4 +23,4 @@ jobs:
 
       - name:  Write something to log
         run:  |
-          echo "I am Reusable Workflow One on the same branch:
+          echo "I am Reusable Workflow One on the same branch"
