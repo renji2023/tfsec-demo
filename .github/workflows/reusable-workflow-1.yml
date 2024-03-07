@@ -20,3 +20,7 @@ jobs:
         uses: aquasecurity/tfsec-action@v1.0.0
         with:
           working_directory: ./tf-fix
+
+      - name:  Write something to log
+        run:  |
+          echo "I am Reusable Workflow One on the same branch:
