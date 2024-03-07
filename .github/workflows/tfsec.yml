@@ -22,7 +22,7 @@ jobs:
       - name: Run tfsec
         uses: aquasecurity/tfsec-action@v1.0.0
         with:
-          working_directory: ./infrastructure
+          working_directory: ./tf-fix
 
 
 
