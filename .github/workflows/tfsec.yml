@@ -1,26 +1,16 @@
 name: tfsec
+
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
+    branches: [ "main" ]
+
 jobs:
-  tfsec:
-    name: tfsec sarif report
-    runs-on: ubuntu-latest
+  call-workflow-in-local-repo:
+    uses: renji2023/test_demo/.github/workflows/reusable_workflow2.yml@master
 
-    steps:
-      - name: Clone repo
-        uses: actions/checkout@master
 
-      - name: tfsec
-        uses: tfsec/tfsec-sarif-action@v0.1.0
-        with:
-          sarif_file: tfsec.sarif
-          full_repo_scan: true
 
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          # Path to SARIF file relative to the root of the repository
-          sarif_file: tfsec.sarif  
+
+

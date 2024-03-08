@@ -1,0 +1,10 @@
+logging:
+  level:
+    root: INFO
+
+alfa-integrator:
+  api:
+    url: http://localhost:8081
+ppsr-integrator:
+  api:
+    url: http://localhost:8089
